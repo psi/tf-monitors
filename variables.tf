@@ -20,6 +20,6 @@ variable "restarts_critical_threshold" {
 }
 
 variable "notification_targets" {
-  type        = list(string)
+  type        = string
   description = "List of targets to notify. Slack channels must be configured in DataDog previously. (Ex: @jdharrington@instructure.com, @slack-bx-core-notif)"
 }

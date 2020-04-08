@@ -17,7 +17,7 @@ resource "datadog_monitor" "container_flapping" {
   The {{kube_container_name}} container in {{pod_name}} is stable. No restarts in the last 5 minutes.
   {{/is_recovery}}
 
-  ${join(" ", var.notification_targets)}
+  ${var.notification_targets}
   EOF
 
   include_tags = false
